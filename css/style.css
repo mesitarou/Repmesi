@@ -1,0 +1,189 @@
+:root {
+  --paper: #f3efe6;
+  --sheet: #fffdf8;
+  --ink: #1c1915;
+  --muted: #5c564c;
+  --line: #e0d6c6;
+  --accent: #1e4d3a;
+  --accent-soft: #e6f0ea;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 42rem 16rem at 50% -4rem, #fff 0%, transparent 70%),
+    var(--paper);
+  font-family:
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans CJK JP",
+    "Noto Sans JP",
+    "Yu Gothic",
+    YuGothic,
+    Meiryo,
+    sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.wrap {
+  width: min(40rem, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 2.75rem 0 4.5rem;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.wordmark:hover {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--ink);
+}
+
+nav a[aria-current="page"] {
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+main {
+  padding-top: 2.75rem;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.lede,
+p {
+  margin: 0 0 1rem;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.pages {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pages a {
+  display: block;
+  padding: 1rem 1.15rem 1.05rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  background: var(--sheet);
+  color: inherit;
+  text-decoration: none;
+}
+
+.pages a:hover {
+  background: var(--accent-soft);
+}
+
+.pages strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.pages span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.note {
+  margin-top: 1.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  background: var(--sheet);
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+a.external {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 3.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+a:focus-visible,
+.pages a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #cfe3d6;
+}
